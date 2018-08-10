@@ -7,7 +7,6 @@ target 'marvel' do
 
   # Pods for marvel
   pod 'CryptoSwift'
-  pod 'lottie-ios'
   pod 'Hero'
   target 'marvelTests' do
     inherit! :search_paths

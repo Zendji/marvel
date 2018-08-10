@@ -13,10 +13,10 @@ struct MarvelProvider {
     
     public static func requestAllHeroes(limit: Int, offset:Int, requestSucess: @escaping requestSucess) {
 
-        if let apikey = MarvelDataRequest.shared?.apikey {
+        if let apikey = MarvelDataRequest.shared?.apikey, let privateKey = MarvelDataRequest.shared?.privateKey {
             let urlString = "https://gateway.marvel.com/v1/public/characters?"
             let dataLimit = "limit=\(limit)&offset=\(offset)&"
-            let urlDataKey = "\(getFinalURL(apikey: apikey))"
+            let urlDataKey = "\(getFinalURL(apikey: apikey, privateKey: privateKey))"
             
             let urlComplete = urlString + dataLimit + urlDataKey
             
@@ -53,19 +53,12 @@ struct MarvelProvider {
     }
 
     
-    static func getFinalURL(apikey: String) -> String {
-        if let path = Bundle.main.path(forResource: "Config", ofType: "plist"), let dict = NSDictionary(contentsOfFile: path) as? [String: AnyObject] {
-            let apikey = dict.index(forKey: "apikey")
-            let privateKey = dict.index(forKey: "private key")
-            
-            print(apikey)
-            print(privateKey)
-        }
+    static func getFinalURL(apikey: String, privateKey: String) -> String {
         
         let timestamp = self.currentTimeInMiliseconds()
-        let privateKey = "2a54b9ac292aba7af08467200ce89c53ffac1625"
+        let privateKey = privateKey
         let hash = "\(timestamp)\(privateKey)\(apikey)".md5()
-        let finalUrl = "ts=\(timestamp)&apikey=6392fe4e33b318334c2a5b3f92e1fe4e&hash=\(hash)"
+        let finalUrl = "ts=\(timestamp)&apikey=\(apikey)&hash=\(hash)"
         return finalUrl
     }
     
