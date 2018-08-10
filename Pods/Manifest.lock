@@ -1,0 +1,24 @@
+PODS:
+  - CryptoSwift (0.10.0)
+  - Hero (1.2.0)
+  - lottie-ios (2.5.0)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - Hero
+  - lottie-ios
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+    - Hero
+    - lottie-ios
+
+SPEC CHECKSUMS:
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
+  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+
+PODFILE CHECKSUM: 9a2e7c236551e03afa776c95f79479aba2fa1c5f
+
+COCOAPODS: 1.5.3

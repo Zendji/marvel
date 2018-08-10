@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController restorationIdentifier="Detail" id="zNJ-i3-4eU" customClass="DetailViewController" customModule="marvel" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="vDS-Au-hpz">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9op-Tp-RAE">
+                        <rect key="frame" x="52.5" y="55" width="270" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="270" id="Q5G-RA-NPq"/>
+                            <constraint firstAttribute="height" constant="200" id="lN6-tK-aG8"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="heroImage"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMY-B4-l8s">
+                        <rect key="frame" x="16" y="275" width="343" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="heroDescription"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HERO NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ia-4J-w6Y">
+                        <rect key="frame" x="16" y="26" width="343" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="heroName"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOI-iD-xFY">
+                        <rect key="frame" x="16" y="16" width="30" height="30"/>
+                        <state key="normal" title="&lt;"/>
+                        <connections>
+                            <action selector="backAction:" destination="zNJ-i3-4eU" eventType="touchUpInside" id="etC-YI-OOS"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="2Ia-4J-w6Y" firstAttribute="leading" secondItem="nkO-PZ-Ehc" secondAttribute="leading" constant="16" id="4b3-MX-PKe"/>
+                    <constraint firstItem="9op-Tp-RAE" firstAttribute="top" secondItem="2Ia-4J-w6Y" secondAttribute="bottom" constant="11" id="6iy-iI-HKj"/>
+                    <constraint firstItem="9op-Tp-RAE" firstAttribute="centerX" secondItem="vDS-Au-hpz" secondAttribute="centerX" id="GZe-sD-Y2E"/>
+                    <constraint firstItem="gOI-iD-xFY" firstAttribute="top" secondItem="vDS-Au-hpz" secondAttribute="top" constant="16" id="KzP-T6-6DR"/>
+                    <constraint firstItem="WMY-B4-l8s" firstAttribute="top" secondItem="9op-Tp-RAE" secondAttribute="bottom" constant="20" id="LRJ-Su-Xs9"/>
+                    <constraint firstItem="gOI-iD-xFY" firstAttribute="leading" secondItem="nkO-PZ-Ehc" secondAttribute="leading" constant="16" id="MmE-Sr-ZCO"/>
+                    <constraint firstItem="nkO-PZ-Ehc" firstAttribute="trailing" secondItem="2Ia-4J-w6Y" secondAttribute="trailing" constant="16" id="gtV-aB-xW6"/>
+                    <constraint firstItem="nkO-PZ-Ehc" firstAttribute="trailing" secondItem="WMY-B4-l8s" secondAttribute="trailing" constant="16" id="izw-Mc-YUi"/>
+                    <constraint firstItem="WMY-B4-l8s" firstAttribute="leading" secondItem="nkO-PZ-Ehc" secondAttribute="leading" constant="16" id="qPp-b7-GFj"/>
+                    <constraint firstItem="2Ia-4J-w6Y" firstAttribute="top" secondItem="nkO-PZ-Ehc" secondAttribute="top" constant="6" id="wMx-dt-PXY"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="nkO-PZ-Ehc"/>
+            </view>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="heroImage" destination="9op-Tp-RAE" id="tyY-Y7-24e"/>
+                <outlet property="heroName" destination="2Ia-4J-w6Y" id="sG1-Je-fgN"/>
+                <outlet property="labelHeroDescription" destination="WMY-B4-l8s" id="3rf-c9-GOk"/>
+            </connections>
+            <point key="canvasLocation" x="1537" y="-228"/>
+        </viewController>
+    </objects>
+</document>
