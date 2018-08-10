@@ -1,7 +1,7 @@
 # Marvel API
 Projeto foi criado para mostrar uma maneira de utilizar as camadas de Manager e Provider.
 
-Este projeto realiza as conexões nas API`s de https://developer.marvel.com/docs#!/
+As conexões realiza utilizam as API`s de https://developer.marvel.com/docs#!/
 
 ### Tech
 * [Swift 4.1]! 
